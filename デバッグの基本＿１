@@ -1,47 +1,43 @@
 class Animal
-  p '----------1-----------'
   def bark
     p 'Yeah, it’s barking.'
-    p '----------8-----------'
+    p '----------1-----------'
   end
 end
 
 class Dog < Animal
-  p '----------2-----------'
   attr_accessor :name, :age
-p '----------3-----------'
   def initialize(name, age=1)
-    p '----------6-----------'
     @name = name
     @age = age
+      p '----------2-----------'
   end
 end
 
 class MechaDog < Dog
-p '----------4-----------'
   def initialize(name, age=1)
-    p '----------5-----------'
     super(name, age=1)
-    p '----------7-----------'
     @data = { 'apache' => 'apache', 'bsd' => 'mit', 'chef' => 'apache' }
+      p '----------3-----------'
   end
 
 
   def proc arg
     path = (arg.split[0]).split('/')[1..-1]
-    p '----------9-----------'
     if path.nil?
       keys=[]
       @data.each do |key, _value|
+          p '----------4-----------'
         keys << key
       end
       p keys
     elsif path.size == 2
       @data[path[0].chomp] = path[1]
       p path[1]
+        p '----------5-----------'
     else
       p path[0]  => @data[path[0]].to_s
-      p '----------10-----------'
+          p '----------6-----------'
     end
   end
 
