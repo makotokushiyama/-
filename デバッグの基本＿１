@@ -8,7 +8,7 @@ end
 class Dog < Animal
   attr_accessor :name, :age
   def initialize(name, age=1)
-      p '----------2-----------'
+    p '----------2-----------'
     @name = name
     @age = age
   end
@@ -16,14 +16,14 @@ end
 
 class MechaDog < Dog
   def initialize(name, age=1)
-      p '----------3-----------'
+    p '----------3-----------'
     super(name, age=1)
     @data = { 'apache' => 'apache', 'bsd' => 'mit', 'chef' => 'apache' }
   end
 
 
   def proc arg
-      p '----------4-----------'
+    p '----------4-----------'
     path = (arg.split[0]).split('/')[1..-1]
     if path.nil?
       p '----------5-----------'
@@ -36,6 +36,7 @@ class MechaDog < Dog
       @data[path[0].chomp] = path[1]
       p path[1]
     else
+      p '----------6-----------'
       p path[0]  + "=>" + @data[path[0]].to_s
     end
   end
@@ -48,4 +49,3 @@ mdog.bark
 p mdog.age
 p mdog.name
 mdog.proc "GET /bsd HTTP/1.1"
-
