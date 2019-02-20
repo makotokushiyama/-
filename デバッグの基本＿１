@@ -36,7 +36,7 @@ class MechaDog < Dog
       @data[path[0].chomp] = path[1]
       p path[1]
     else
-      p path[0]  => @data[path[0]].to_s
+      p path[0]  + "=>" + @data[path[0]].to_s
     end
   end
 
@@ -48,3 +48,4 @@ mdog.bark
 p mdog.age
 p mdog.name
 mdog.proc "GET /bsd HTTP/1.1"
+
