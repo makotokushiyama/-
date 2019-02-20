@@ -33,10 +33,11 @@ class MechaDog < Dog
       end
       p keys
     elsif path.size == 2
+      p '----------6-----------'
       @data[path[0].chomp] = path[1]
       p path[1]
     else
-      p '----------6-----------'
+      p '----------7-----------'
       p path[0]  + "=>" + @data[path[0]].to_s
     end
   end
