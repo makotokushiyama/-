@@ -33,7 +33,7 @@ class MechaDog < Dog
       p path[1]
     else
       p  path[0] +" => "+ @data[path[0]].to_s
-      #この変数の内容が「  p path[0] +" => "+ @data[path[0]].to_s」になっているが、「 p 'bsd' => 'mit'」になるべき
+      #この変数の内容が「 p path[0] +" => "+ @data[path[0]].to_s」になっているが、「 p 'bsd' => 'mit'」になるべき
     end
   end
 
