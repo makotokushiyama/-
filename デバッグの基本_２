@@ -22,6 +22,7 @@ class MechaDog < Dog
 
   def proc arg
     path = (arg.split[0]).split('/')[1..-1]
+    p path
     #この変数の内容が「 []」になっているが、「 arg.split[1]).split('/')[1..-1]」になるべき
     if path.nil?
       keys=[]
@@ -32,7 +33,6 @@ class MechaDog < Dog
       @data[path[0].chomp] = path[1]
       p path[1]
     else
-      p path
       p  path[0] +" => "+ @data[path[0]].to_s
 
     end
