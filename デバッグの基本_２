@@ -23,7 +23,7 @@ class MechaDog < Dog
   def proc arg
     path = (arg.split[0]).split('/')[1..-1]
     p path
-    #この変数の内容が「 []」になっているが、「 arg.split[1]).split('/')[1..-1]」になるべき
+    #この変数の内容が「 []」になっているが、「bsd」になるべき
     if path.nil?
       keys=[]
       @data.each do |key, _value|
