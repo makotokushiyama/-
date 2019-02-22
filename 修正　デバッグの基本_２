@@ -25,9 +25,12 @@ class MechaDog < Dog
 
   def proc arg
     p '----------4-----------'
-    p arg.split()
-    p arg.split[0]
-    p arg.split[1].split('/')[1..-1]
+    #p arg.split()
+    #p arg.split[0]
+    #p arg.split[0].split('/')
+    #p arg.split[1]
+    #p arg.split[1].split('/')
+    #p arg.split[1].split('/')[1..-1]
     path = (arg.split[0]).split('/')[1..-1]
     #この変数の内容が「 []」になっているが、「 ["bsd"]」になるべき
     if path.nil?
